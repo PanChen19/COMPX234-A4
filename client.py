@@ -5,7 +5,10 @@ target_port = 9999
  
 #Create a socket object
 client = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
- 
+# Request to doenload file
+filename = "file.txt"
+download_message = f"DOWNLOAD {filename}"
+
 #Send some data
 client.sendto('AAABBBCCC'.encode(),(target_host,target_port))
  
